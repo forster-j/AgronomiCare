@@ -37,7 +37,7 @@ def summarize_pred_metrics(model, X_test, y_test, classes, normalize = False,
     print('---------'*7)
     print("Classification report:")
     print('---------'*7)
-    print(classification_report(y_test,y_pred_th))
+    print(classification_report(y_test,y_pred))
     print('---------'*7)
     print('ROC AUC score:',round(roc_auc_score(y_test,y_pred_proba),2))
     print('---------'*7)
