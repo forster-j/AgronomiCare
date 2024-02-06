@@ -138,3 +138,12 @@ data/images/*
 
 #config file has sensitive data
 .mlflow_uri
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
