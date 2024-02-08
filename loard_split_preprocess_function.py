@@ -15,4 +15,4 @@ def load_preprocess_split_train_val(data_path):
         image_size = (224, 224),
         crop_to_aspect_ratio = True
     )
-    return image 
+    return image
