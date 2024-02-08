@@ -135,6 +135,7 @@ mlruns
 models/*
 data/archive.zip
 data/images/*
+data/*
 
 #config file has sensitive data
 .mlflow_uri
