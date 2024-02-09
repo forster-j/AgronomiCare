@@ -154,3 +154,4 @@ ypy-websocket==0.8.4
 zipp==3.17.0
 tensorflow==2.15.0
 tensorflow_datasets
+tensorflow-metal
