@@ -129,15 +129,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
-data/*.csv
-models/*.sav
-mlruns
-models/*
-data/archive.zip
-data/images/*
-data/*
-
 #config file has sensitive data
 .mlflow_uri
 
@@ -149,3 +140,11 @@ data/*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# files
+data/*.csv
+models/*.sav
+mlruns
+models/*
+data/archive.zip
+data/*
