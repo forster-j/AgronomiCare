@@ -145,6 +145,6 @@ Thumbs.db
 data/*.csv
 models/*.sav
 mlruns
-models/*
+#models/*
 data/archive.zip
 data/*
