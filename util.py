@@ -58,10 +58,11 @@ def classify(image, model, class_names):
 
     # Convert image to numpy array and normalize
     image_array = np.asarray(image)
-    normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
+    ##normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
 
     # Expand dimensions to match model input shape
-    data = np.expand_dims(normalized_image_array, axis=0)
+    ##data = np.expand_dims(normalized_image_array, axis=0)
+    data = np.expand_dims(image_array, axis=0)
 
     # Make prediction
     predictions = model.predict(data)

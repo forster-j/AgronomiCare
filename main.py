@@ -14,9 +14,15 @@ st.markdown("<h1 style='text-align: center; color: black;'>Agronomicare 🍃</h1
 # set header
 st.header('Welcome to Agronomicare, your one-stop crop diagnosis and remedy recommender.')
 
-# set text
-st.text('Please upload an image of a leaf of your crop according to the instruction in the left sidebar.')
-
+# set description
+multi = '''
+Using Agronomicare is really easy. To diagnose your crops, 
+please take or upload a photo of a leaf of the plant according to the instructions on the left.
+Agronomicare will then use the power of neural networks to tell if the crop is healthy or not.
+If the crop is suffering from a disease, it will automatically suggest natural remedies and
+chemical pesticides.
+'''
+st.markdown(multi)
 
 # set sidebar
 st.sidebar.title('How to: ')
@@ -65,6 +71,14 @@ classes = [
     'tungro',
     ]
 
+# Disclaimer for predictions
+
+disclaimer = '''
+*Please note that Agronomicare can make mistakes. 
+It's good practice to take photos from different angles and consult with your local dealer
+or botanist to get a reliable prediction.*
+'''
+
 #preprocessing function
 
 def preprocess_image(uploaded_file, target_size=(224, 224)):
@@ -91,35 +105,49 @@ if file is not None:
     # Preprocess the uploaded image
     input_image = Image.open(file).convert('RGB')
 
-    # classify image
+    # Classify image
     class_name, conf_score = classify(input_image, model, classes)
 
     # Display predictions
     st.write("## {}".format(class_name))
     st.write("### score: {}%".format(int(conf_score * 1000) / 10))
 
-    # get the recommendation for the natural remmedy
-    recommendation_text_nat = nat_recommendation(class_name)
+    # check if class is 'healthy'
+    if class_name == 'healthy':
+        st.write("Congratulations, your crop seems to be healthy!")
+        st.write("There is no need for any remedy or pesticide.")
+        st.markdown("Happy farming 🚜")
+        st.divider()
+        st.markdown(disclaimer)
 
-    # Calculate the height of the text area dynamically based on the length of the recommendation text
-    num_lines = max(recommendation_text_nat.count('\n') + 1, 3)  # Adjust minimum height to 3 lines
-    height = num_lines * 20  # 20 pixels per line
+    else:
+        st.write(f"Your crop seems to be suffering from {class_name}")
+        # get the recommendation for the natural remmedy
+        recommendation_text_nat = nat_recommendation(class_name)
 
-    # Display the recommendation
-    #st.text_area("Natural Remedy Recommendation", value=recommendation_text, height=200)
-    st.markdown("<h2 style='font-weight: bold;'>Natural Remedy Recommendation:</h2>", unsafe_allow_html=True)
-    st.text_area(" ", value=recommendation_text_nat, height=height)
+        # Calculate the height of the text area dynamically based on the length of the recommendation text
+        num_lines = max(recommendation_text_nat.count('\n') + 1, 3)  # Adjust minimum height to 3 lines
+        height = num_lines * 20  # 20 pixels per line
 
-    # get the recommendation for the chemical remmedy
-    recommendation_text_chem = chem_recommendation(class_name)
+        # Display the recommendation
+        #st.text_area("Natural Remedy Recommendation", value=recommendation_text, height=200)
+        st.markdown("<h2 style='font-weight: bold;'>Natural Remedy Recommendation:</h2>", unsafe_allow_html=True)
+        st.text_area(" ", value=recommendation_text_nat, height=height)
 
-    # Calculate the height of the text area dynamically based on the length of the recommendation text
-    num_lines = max(recommendation_text_chem.count('\n') + 1, 3)  # Adjust minimum height to 3 lines
-    height = num_lines * 20  # 20 pixels per line
+        # get the recommendation for the chemical remmedy
+        recommendation_text_chem = chem_recommendation(class_name)
 
-    # Display the recommendation
-    #st.text_area("Natural Remedy Recommendation", value=recommendation_text, height=200)
-    st.markdown("<h2 style='font-weight: bold;'>Chemical Remedy Recommendation:</h2>", unsafe_allow_html=True)
-    st.text_area(" ", value=recommendation_text_chem, height=height)
+        # Calculate the height of the text area dynamically based on the length of the recommendation text
+        num_lines = max(recommendation_text_chem.count('\n') + 1, 3)  # Adjust minimum height to 3 lines
+        height = num_lines * 20  # 20 pixels per line
+
+        # Display the recommendation
+        #st.text_area("Natural Remedy Recommendation", value=recommendation_text, height=200)
+        st.markdown("<h2 style='font-weight: bold;'>Chemical Remedy Recommendation:</h2>", unsafe_allow_html=True)
+        st.text_area(" ", value=recommendation_text_chem, height=height)
+
+        # Print disclaimer
+        st.divider()
+        st.markdown(disclaimer)
  
 
