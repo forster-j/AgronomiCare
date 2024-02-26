@@ -1,112 +1,101 @@
-# ds-modeling-pipeline
+# Crop disease prediction and pesticide/or natural remedies recommendation
 
-Here you find a Skeleton project for building a simple model in a python script or notebook and log the results on MLFlow.
+## Overview
 
-There are two ways to do it: 
-* In Jupyter Notebooks:
-    We train a simple model in the [jupyter notebook](notebooks/EDA-and-modeling.ipynb), where we select only some features and do minimal cleaning. The hyperparameters of feature engineering and modeling will be logged with MLflow
+This repository contains code for a crop disease prediction and remedies recommendation system. The Crop Disease Prediction and Remediation System plays a crucial role in modern agriculture by providing farmers with proactive tools to manage and safeguard their crops effectively. By accurately predicting the likelihood of crop diseases, the system empowers farmers to take preemptive measures, thereby reducing the risk of yield loss and economic damage. Additionally, the recommendation of appropriate remedies, whether pesticide-based or natural, enables farmers to make informed decisions that balance effectiveness with environmental sustainability. Ultimately, this system not only helps optimize crop yields but also contributes to the sustainable and responsible management of agricultural resources, ensuring food security for communities worldwide.
 
-* With Python scripts:
-    The [main script](modeling/train.py) will go through exactly the same process as the jupyter notebook and also log the hyperparameters with MLflow
+## About the Dataset
+We have used Plant Diseases Training Dataset from Kaggle. This dataset contains a collection of images of various plant leaves affected by different diseases. It is ccontain 95868 images and 38 disease type.
+> Total Images: 95868
 
-Data used is the [coffee quality dataset](https://github.com/jldbc/coffee-quality-database).
+> Classes: 38 (e.g., 'Apple___Apple_scab', 'Apple___Black_rot', 'Grape___Black_rot', etc.) 
 
-## Requirements:
 
-- pyenv with Python: 3.9.4
+## Repository Structure
 
-### Setup
+* model: Contains saved files of the model.
+* src: Includes scripts for different purposes:
+* preprocessing.py: Defines hyperparameters used in the model.
+* Load_and_EDA.py: Includes scripts for loading the data.
+* train.py: Script for training the models.
+* predict.py: Script for outcome of the models.
+* notebook: Experimental notebooks used for analysis and development.
+* feature_engineering.py: Script for the feature engineering.
 
-Use the requirements file in this repo to create a new environment.
+## Getting Started
 
-```BASH
-make setup
+Clone this repository.
+Set up a Python environment and install the necessary dependencies listed in requirements.txt.
+Utilize the provided scripts in the src directory for model training, data preprocessing, etc.
 
-#or
+## Set up your Environment
 
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements_dev.txt
-```
+### **`macOS`** type the following commands : 
 
-The `requirements.txt` file contains the libraries needed for deployment.. of model or dashboard .. thus no jupyter or other libs used during development.
+- For installing the virtual environment you can either use the [Makefile](Makefile) and run `make setup` or install it manually with the following commands:
 
-The MLFLOW URI should **not be stored on git**, you have two options, to save it locally in the `.mlflow_uri` file:
+     ```BASH
+    make setup
+    ```
+    After that active your environment by following commands:
+    ```BASH
+    source .venv/bin/activate
+    ```
+Or ....
+- Install the virtual environment and the required packages by following commands:
 
-```BASH
-echo http://127.0.0.1:5000/ > .mlflow_uri
-```
+    ```BASH
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+    
+### **`WindowsOS`** type the following commands :
 
-This will create a local file where the uri is stored which will not be added on github (`.mlflow_uri` is in the `.gitignore` file). Alternatively you can export it as an environment variable with
+- Install the virtual environment and the required packages by following commands.
 
-```bash
-export MLFLOW_URI=http://127.0.0.1:5000/
-```
+   For `PowerShell` CLI :
 
-This links to your local mlflow, if you want to use a different one, then change the set uri.
+    ```PowerShell
+    pyenv local 3.11.3
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
 
-The code in the [config.py](modeling/config.py) will try to read it locally and if the file doesn't exist will look in the env var.. IF that is not set the URI will be empty in your code.
+    For `Git-bash` CLI :
+  
+    ```BASH
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/Scripts/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
 
+    **`Note:`**
+    If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
+    ```Bash
+    python.exe -m pip install --upgrade pip
+    ```
+
+
+   
 ## Usage
-
-### Creating an MLFlow experiment
-
-You can do it via the GUI or via [command line](https://www.mlflow.org/docs/latest/tracking.html#managing-experiments-and-runs-with-the-tracking-service-api) if you use the local mlflow:
-
-```bash
-mlflow experiments create --experiment-name 0-template-ds-modeling
-```
-
-Check your local mlflow
-
-```bash
-mlflow ui
-```
-
-and open the link [http://127.0.0.1:5000](http://127.0.0.1:5000)
-
-This will throw an error if the experiment already exists. **Save the experiment name in the [config file](modeling/config.py).**
 
 In order to train the model and store test data in the data folder and the model in models run:
 
-```bash
-#activate env
-source .venv/bin/activate
+**`Note`**: Make sure your environment is activated.
 
-python -m modeling.train
+```bash
+python example_files/train.py  
 ```
 
 In order to test that predict works on a test set you created run:
 
 ```bash
-python modeling/predict.py models/linear data/X_test.csv data/y_test.csv
+python example_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
 ```
-
-## About MLFLOW -- delete this when using the template
-
-MLFlow is a tool for tracking ML experiments. You can run it locally or remotely. It stores all the information about experiments in a database.
-And you can see the overview via the GUI or access it via APIs. Sending data to mlflow is done via APIs. And with mlflow you can also store models on S3 where you version them and tag them as production for serving them in production.
-![mlflow workflow](images/0_general_tracking_mlflow.png)
-
-### MLFlow GUI
-
-You can group model trainings in experiments. The granularity of what an experiment is up to your usecase. Recommended is to have an experiment per data product, as for all the runs in an experiment you can compare the results.
-![gui](images/1_gui.png)
-
-### Code to send data to MLFlow
-
-In order to send data about your model you need to set the connection information, via the tracking uri and also the experiment name (otherwise the default one is used). One run represents a model, and all the rest is metadata. For example if you want to save train MSE, test MSE and validation MSE you need to name them as 3 different metrics.
-If you are doing CV you can set the tracking as nested.
-![mlflow code](images/2_code.png)
-
-### MLFlow metadata
-
-There is no constraint between runs to have the same metadata tracked. I.e. for one run you can track different tags, different metrics, and different parameters (in cv some parameters might not exist for some runs so this .. makes sense to be flexible).
-
-- tags can be anything you want.. like if you do CV you might want to tag the best model as "best"
-- params are perfect for hypermeters and also for information about the data pipeline you use, if you scaling vs normalization and so on
-- metrics.. should be numeric values as these can get plotted
-
-![mlflow metadata](images/3_metadata.png)
