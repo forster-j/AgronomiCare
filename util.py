@@ -72,13 +72,13 @@ def classify(image, model, class_names):
     return class_name, confidence_score
 
 def nat_recommendation(class_name):
-    df = pd.read_csv("/Users/freyasteinhagen/neue_fische/AgronomiCare/data/pesticides_dataset.csv")
+    df = pd.read_csv("./table/pesticides_dataset.csv")
     if class_name in df['disease\n'].values:
         natural_remedy = df.loc[df['disease\n'] == class_name, 'natural_remedies'].iloc[0]
         return natural_remedy
     
 def chem_recommendation(class_name):
-    df = pd.read_csv("/Users/freyasteinhagen/neue_fische/AgronomiCare/data/pesticides_dataset.csv")
+    df = pd.read_csv("./table/pesticides_dataset.csv")
     if class_name in df['disease\n'].values:
-        natural_remedy = df.loc[df['disease\n'] == class_name, 'chemical_control'].iloc[0]
-        return natural_remedy
+        chemical_control = df.loc[df['disease\n'] == class_name, 'chemical_control'].iloc[0]
+        return chemical_control
