@@ -9,10 +9,14 @@ import tempfile
 from util import classify, set_background, nat_recommendation, chem_recommendation
 
 # set title
-st.markdown("<h1 style='text-align: center; color: black;'>Agronomycare 🍃</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Agronomicare 🍃</h1>", unsafe_allow_html=True)
 
 # set header
-st.header('Please upload an image of your crop according to the instruction in the sidebar ')
+st.header('Welcome to Agronomicare, your one-stop crop diagnosis and remedy recommender.')
+
+# set text
+st.text('Please upload an image of a leaf of your crop according to the instruction in the left sidebar.')
+
 
 # set sidebar
 st.sidebar.title('How to: ')
@@ -33,9 +37,33 @@ set_background(main_bg_color="#EBEBEB", sidebar_bg_color="#edffcc")
 
 # load class names 
 
-classes_directory_path = 'data/filtered_diseases/test_filtered/'
-
-classes = [f.name for f in os.scandir(classes_directory_path) if f.is_dir()]
+classes = [
+    'alternaria_leaf_spot',
+    'bacterial_blight',
+    'bacterial_spot',
+    'bacterial_wilt',
+    'black_measles',
+    'black_rot',
+    'blast',
+    'brown_spot',
+    'brown_streak_disease',
+    'citrus_greening',
+    'common_rust',
+    'early_blight',
+    'gray_leaf_spot',
+    'healthy',
+    'isariopsis_leaf_spot',
+    'late_blight',
+    'leaf_curl',
+    'leaf_mold',
+    'mosaic_disease',
+    'northern_leaf_blight',
+    'powdery_mildew',
+    'red_rot',
+    'spider_mites',
+    'target_spot',
+    'tungro',
+    ]
 
 #preprocessing function
 
