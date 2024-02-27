@@ -1,6 +1,4 @@
-"disease
-","disease_name
-",disease_type,disease_description,chemical_control,natural_remedies
+disease,disease_name,disease_type,disease_description,chemical_control,natural_remedies
 alternaria_leaf_spot,Alternaria leaf spot,Fungal disease,"Alternaria leaf spot is a plant disease caused by fungi of the Alternaria genus, primarily Alternaria solani and Alternaria alternata. Symptoms typically appear as small, dark spots on leaves that gradually enlarge and develop concentric rings, giving them a target-like appearance.
 ","Captan, 
 Fludioxonil,
@@ -103,7 +101,7 @@ Copper,
 Sulfur or 
 Potassium bicarbonate"
 isariopsis_leaf_spot,Isariopsis leaf spot,"Fungal disease   
-","Isariopsis leaf spot, caused by the fungus Isariopsis griseola. Symptoms include small, angular lesions on leaves that start as water-soaked spots and progress to brown or gray necrotic areas with a yellow halo. Lesions may coalesce, leading to defoliation and reduced yield if severe 
+","Isariopsis leaf spot, caused by the fungus Isariopsis griseola. Symptoms include small, angular lesions on leaves that start as water-soaked spots and progress to brown or gray necrotic areas with a yellow halo. Lesions may coalesce, leading to defoliation and reduced yield if severe. 
 ","Azoxystrobin, 
 Boscalid, 
 Cyprodinil, 

@@ -1,12 +1,9 @@
-
-import base64
-
 import streamlit as st
 from PIL import ImageOps, Image
 import numpy as np
 import pandas as pd
 
-import base64
+PESTICIDES = pd.read_csv("./table/pesticides_dataset.csv", sep=',')
 
 def set_background(main_bg_color="#EBEBEB", sidebar_bg_color="#edffcc"):
     """
@@ -72,14 +69,20 @@ def classify(image, model, class_names):
 
     return class_name, confidence_score
 
-def nat_recommendation(class_name):
-    df = pd.read_csv("./table/pesticides_dataset.csv")
-    if class_name in df['disease\n'].values:
-        natural_remedy = df.loc[df['disease\n'] == class_name, 'natural_remedies'].iloc[0]
-        return natural_remedy
     
-def chem_recommendation(class_name):
-    df = pd.read_csv("./table/pesticides_dataset.csv")
-    if class_name in df['disease\n'].values:
-        chemical_control = df.loc[df['disease\n'] == class_name, 'chemical_control'].iloc[0]
-        return chemical_control
+def lookup_value(search_value, result_column):
+    """
+    Look up a specific row in a dataframe and return the value of another column for the same observation.
+
+    Parameters:
+        search_value: the value to search for in the search_column
+        result_column: str, the column from which to retrieve the result
+
+    Returns:
+        The value in the result_column for the specified row, or None if the row is not found.
+    """
+    try:
+        result = PESTICIDES.loc[PESTICIDES['disease'] == search_value, result_column].values[0]
+        return result
+    except IndexError:
+        return None
