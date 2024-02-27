@@ -1,26 +1,194 @@
-"disease
-",chemical_control,natural_remedies
-alternaria_leaf_spot,"Disease Type: Fungal disease Possible chemical treatment:                                                                       -  pyraclostrobin + boscalid, -  captan,  - mancozeb,  - fludioxonil - fluopyram + febuconazole","- neem oil,  - garlic extract,  - baking soda solution (1 teaspoon baking soda + 1 quart water), - diluted apple cider vinegar (1 part vinegar to 3 parts water)"
-bacterial_blight,Disease Type: Bacterial disease Possible chemical treatment:   - Streptomycin sulphate + Tetracycline combination 300 g + Copper oxychloride 1.25kg/ha. ,"- neem oil, "
-bacterial_spot,"Disease Type: Bacterial disease     Possible chemical treatment:  - Kocide® Opti, - Flint  ",- Garlic Spray - Baking Soda Solution: Mix 1 tablespoon of baking soda with 1 gallon of water and a few drops of dish soap.
-bacterial_wilt,"Disease Type: Bacterial disease     Possible chemical treatment:  - Agri-Strep,   - Streptomycin sulphate                                                                                           ","- garlic extract,  - neem oil,  - ginger extract,  - chitosan"
-black_measles,"Disease Type: Fungal disease    Possible chemical treatment:  - Mancozeb,  - Propiconazole,  - Myclobutanil","- neem oil,  - garlic extract"
-black_rot,"Disease Type: Fungal disease    Possible chemical treatment: - Captan,  - Fludioxonil,  - Myclobutanil,  - Mancozeb","- neem oil,  - garlic extract,  - baking soda solution"
-blast,"Disease Type: Fungal disease    Possible chemical treatment: - Captan,  - Azoxystrobin,  - Tricyclazole,  - Propiconazole,  - Flutriafol","- neem oil,  - garlic extract,  - baking soda solution (1 teaspoon baking soda + 1 quart water), - diluted apple cider vinegar (1 part vinegar to 3 parts water)"
-brown_spot,"Disease Type: various factors  Possible chemical treatment: - Captan,  - chlorothalonil - sulfur","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-brown_streak_disease,"Disease Type: Virus disease    Possible chemical treatment: - imidacloprid,  - thiamethoxam,  - clothianidin,  - bifenthrin,  - cypermethrin","- garlic extract,  - ginger extract,  - neem oil."
-citrus_greening,"Disease Type: Bacterial disease     Possible chemical treatment:  - Neonicotinoids,  - pyrethroids","- neem oil, "
-common_rust,"Disease Type: Fungal disease    Possible chemical treatment: - triazoles,  - strobilurins,  - difenoconazole  - propiconazole","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-early_blight,"Disease Type: Fungal disease    Possible chemical treatment: - chlorothalonil (0.20%),  - mancozeb (0.20%)  - propineb (0.20%)",- Neem Oil  - Copper-Based Fungicides                            - Baking - Soda Solution.
-gray_leaf_spot,"Disease Type: Fungal disease    Possible chemical treatment: - azoxystrobin,  - propiconazole,  - pyraclostrobin,","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-isariopsis_leaf_spot,"Disease Type: Fungal disease    Possible chemical treatment:  - azoxystrobin,  - Boscalid,  - Cyprodinil,  - Tebuconazole  - Thiophanate-methyl",- Neem Oil  - Copper-Based Fungicides                            - Baking - Soda Solution.
-late_blight,"Disease Type: Fungal disease    Possible chemical treatment: - Metalaxyl-M,  - Fosetyl-Al,  - Fluazinam,  - Cymoxanil  - Mancozeb",- Neem Oil  - Copper-Based Fungicides                            - Baking - Soda Solution.
-leaf_curl,"Disease Type: multiple disease  Possible chemical treatment: - Neonicotinoids,  - Pyrethroids,  - Spirotetramat",- Neem Oil  - Copper-Based Fungicides                            - Baking - Soda Solution.
-leaf_mold,"Disease Type: Fungal disease    Possible chemical treatment: - Neonicotinoids,  - Pyrethroids,  - Organophosphates,  - Carbamates.","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-mosaic_disease,"Disease Type: Virus disease    Possible chemical treatment: - Neonicotinoids,  - Pyrethroids,  - Glyphosate,  - Organophosphates.","- neem oil,  - Garlic and Pepper Spray  - peppermint oil,  - clove oil"
-northern_leaf_blight,"Disease Type: Fungal disease    Possible chemical treatment: - Azoxystrobin,  - Pyraclostrobin,  - Trifloxystrobin,  - Propiconazole,  - Tebuconazole,","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-powdery_mildew,"Disease Type: Fungal disease    Possible chemical treatment: - Myclobutanil,  - Azoxystrobin,  - Propiconazole  - Potassium bicarbonate","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-red_rot,"Disease Type: Fungal disease    Possible chemical treatment: - Neonicotinoids,  - Pyrethroids,  - Propiconazole  - Potassium bicarbonate","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-spider_mites,"Disease Type: pest disease    Possible chemical treatment: - Abamectin,  - Spiromesifen,  - Bifenazate,  - Pyridaben,","- neem oil,  - Garlic and Pepper Spray  - peppermint oil,  - rosemary oil, - clove oil"
-target_spot,"Disease Type: Fungal disease    Possible chemical treatment: - Myclobutanil,  - Mancozeb,  - Captan,  - Fenbuconazole,  - Boscalid","- neem oil,  - garlic extract,  - copper, sulfur, or potassium bicarbonate."
-tungro,"Disease Type: Virus disease    Possible chemical treatment: - glyphosate,  - propanil,  - carbamates,  - pyrethroids","- neem oil,  - garlic extract"
+disease,disease_name,disease_type,disease_description,chemical_control,natural_remedies
+alternaria_leaf_spot,Alternaria leaf spot,Fungal disease,"Alternaria leaf spot is a plant disease caused by fungi of the Alternaria genus, primarily Alternaria solani and Alternaria alternata. Symptoms typically appear as small, dark spots on leaves that gradually enlarge and develop concentric rings, giving them a target-like appearance.
+","Captan, 
+Fludioxonil,
+Fluopyram + Bebuconazole
+Mancozeb or
+Pyraclostrobin + Boscalid
+","Neem oil, 
+Garlic extract, 
+Baking soda solution (1 teaspoon baking soda + 1 quart water)
+or Diluted apple cider vinegar (1 part vinegar to 3 parts water)"
+bacterial_blight,Bacterial blight,"Bacterial disease
+","Bacterial blight is a plant disease caused by various species of bacteria, most commonly Xanthomonas species. It affects a wide range of plants, including vegetables, fruits, and ornamentals. The disease typically manifests as water-soaked lesions on leaves, stems, and sometimes fruits. 
+",Streptomycin sulphate + Tetracycline combination 300 g + Copper Oxychloride 1.25kg/ha. ,Neem oil
+bacterial_spot,Bacterial spot,"Bacterial disease    
+
+","Bacterial spot is a plant disease caused by several species of bacteria, most commonly Xanthomonas spp., such as Xanthomonas campestris and Xanthomonas vesicatoria. Symptoms of bacterial spot typically include small, water-soaked lesions on leaves, fruits, and stems. These lesions may appear initially as dark spots that later turn brown or black","Flint or
+Kocide® Opti,
+
+","Garlic Spray or 
+Baking soda solution: Mix 1 tablespoon of baking soda with 1 gallon of water and a few drops of dish soap"
+bacterial_wilt,Bacterial wilt,"Bacterial disease    
+","Bacterial wilt is a destructive plant disease caused by the bacterium Ralstonia solanacearum. Symptoms of bacterial wilt typically start with wilting of leaves, initially during the hottest part of the day, but progressively worsening until leaves remain wilted at all times. Leaves may also exhibit yellowing or browning, and stems may show signs of discoloration or dark streaking. 
+","Agri-Strep or
+Streptomycin sulphate                                                                                           ","Garlic extract, 
+Neem oil, 
+Ginger extract or 
+Chitosan"
+black_measles,Black measles,"Fungal disease   
+","Black measles is a plant disease characterized by black lesions or spots, it could be caused by various pathogens such as fungi, bacteria, or viruses.
+","Mancozeb,
+Myclobutanil or
+Propiconazole
+","Neem oil or 
+Garlic extract"
+black_rot,Black rot,"Fungal disease   
+","Black rot is a plant disease caused by the fungus Guignardia bidwellii, also known as Phyllosticta ampelicida. Symptoms of black rot typically appear on leaves, fruit, and stems. On leaves, circular or irregular-shaped lesions with dark centers and reddish-brown borders develop.","Captan, 
+Fludioxonil, 
+Myclobutanil or
+Mancozeb","Neem oil, 
+Garlic extract or 
+Baking soda solution"
+blast,Blast,"Fungal disease   
+","Rice blast, caused by the fungus Magnaporthe oryzae, is one of the most devastating diseases affecting rice plants worldwide. Symptoms of blast small, water-soaked lesions appear on leaves, usually near the tips or edges. Lesions rapidly enlarge, becoming spindle-shaped or diamond-shaped, with a gray center and brown to dark-purple borders.
+","Azoxystrobin, 
+Captan,
+Flutriafol, 
+Propiconazole or
+Tricyclazole
+","Neem oil, 
+Garlic extract, 
+Baking soda solution (1 teaspoon baking soda + 1 quart water) 
+or Diluted apple cider vinegar (1 part vinegar to 3 parts water)"
+brown_spot,Brown spot,"Various factors 
+","Brown spot, caused by the fungus Bipolaris oryzae, is a common fungal disease affecting rice plants. Symptoms include small, oval to spindle-shaped lesions with dark centers and yellow halos on leaves. Lesions may coalesce, causing extensive leaf damage and reduced photosynthesis. 
+","Captan, 
+Chlorothalonil or
+Sulfur","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or 
+Potassium bicarbonate"
+brown_streak_disease,Brown streak disease,"Virus disease   
+","Brown streak disease is a viral infection affecting cassava plants, caused by two closely related viruses: Cassava brown streak virus (CBSV) and Ugandan cassava brown streak virus (UCBSV). Symptoms include brown streaks or necrotic lesions on stems, petioles, and leaf veins, along with yellowing of leaf margins and vein clearing.
+","Bifenthrin, 
+Clothianidin, 
+Cypermethrin, 
+Imidacloprid or
+Thiamethoxam
+","Garlic extract, 
+Ginger extract or 
+Neem oil"
+citrus_greening,Citrus greening,"Bacterial disease    
+","Citrus greening, also known as Huanglongbing (HLB), is a devastating bacterial disease affecting citrus trees. It is caused by the bacterium Candidatus Liberibacter asiaticus (CLas). Symptoms of citrus greening include: Yellowing and mottling of leaves, often with asymmetrical blotches. Stunted or malformed fruit, with a bitter or sour taste. Premature fruit drop and reduced yield. Dieback of branches and eventually tree decline.
+","Neonicotinoids or
+Pyrethroids",Neem oil
+common_rust,Common rust,"Fungal disease   
+","Common rust, caused by the fungus Puccinia sorghi, is a prevalent disease. Symptoms include small, circular to oval-shaped orange to reddish-brown pustules on both leaf surfaces. These pustules contain masses of powdery spores. Severe infections can lead to reduced photosynthesis, stunted growth, and yield losses.
+","Difenoconazole,
+Propiconazole,
+Triazoles or Strobilurins
+","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or 
+Potassium bicarbonate"
+early_blight,Early blight,"Fungal disease   
+","Early blight, caused by the fungus Alternaria solani, affects tomatoes and potatoes. Symptoms include small, dark lesions on lower leaves, which expand into irregularly shaped spots with concentric rings. Leaves may yellow and die prematurely, leading to reduced yield if not managed.
+","Chlorothalonil (0.20%), 
+Mancozeb (0.20%) or
+Propineb (0.20%)","Neem oil, 
+Copper-based fungicides or 
+Baking soda solution"
+gray_leaf_spot,Gray leaf spot,"Fungal disease   
+","Gray leaf spot is a fungal disease. Symptoms include small, rectangular gray lesions on leaves, which expand and coalesce, forming larger spots. Severe infections lead to leaf yellowing, necrosis, and reduced plant vigor. 
+","Azoxystrobin, 
+Propiconazole or
+Pyraclostrobin","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or 
+Potassium bicarbonate"
+isariopsis_leaf_spot,Isariopsis leaf spot,"Fungal disease   
+","Isariopsis leaf spot, caused by the fungus Isariopsis griseola. Symptoms include small, angular lesions on leaves that start as water-soaked spots and progress to brown or gray necrotic areas with a yellow halo. Lesions may coalesce, leading to defoliation and reduced yield if severe. 
+","Azoxystrobin, 
+Boscalid, 
+Cyprodinil, 
+Tebuconazole or
+Thiophanate-methyl","Neem oil, 
+Copper-based fungicides or 
+Baking soda Solution"
+late_blight,Late blight,"Fungal disease   
+","Late blight is a fungal disease caused by the oomycete pathogen Phytophthora infestans, is a devastating disease affecting plants like potatoes and tomatoes. Symptoms include dark, water-soaked lesions on leaves, stems, and fruit, rapidly turning brown and becoming covered in a fuzzy white mold in humid conditions. It can lead to widespread plant destruction and significant yield loss if not managed promptly.
+","Cymoxanil, 
+Fosetyl-Al, 
+Fluazinam, 
+Metalaxyl-M or Mancozeb","Neem oil, 
+Copper-based fungicides or 
+Baking soda solution"
+leaf_curl,Leaf curl,"Multiple disease 
+","Leaf curl is a plant disease characterized by the curling and distortion of leaves. Symptoms include upward or downward curling of leaf margins, puckering, and reduced leaf size. It's often caused by viral infections, such as Tomato leaf curl virus, transmitted by whiteflies, and can result in stunted growth and reduced yield in affected plants. 
+","Neonicotinoids, 
+Pyrethroids or
+Spirotetramat","Neem oil, 
+Copper-based fungicides or 
+Baking soda solution"
+leaf_mold,Leaf mold,"Fungal disease   
+","Leaf mold is a fungal disease caused by the pathogen Fulvia fulva (formerly known as Cladosporium fulvum). Symptoms include yellowing and wilting of leaves, accompanied by the development of fuzzy, olive-green to brown patches on the undersides of leaves.","Carbamates 
+Neonicotinoids, 
+Organophosphates or 
+Pyrethroids
+","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or 
+Potassium bicarbonate"
+mosaic_disease,Mosaic disease,"Virus disease   
+","Mosaic disease is a viral infection characterized by irregular patterns of light and dark green patches or streaks on leaves. Symptoms include stunted growth, distorted foliage, and reduced yields. It affects a wide range of plants, including cucurbits, tomatoes, peppers, and beans.
+","Glyphosate,
+Neonicotinoids,
+Organophosphates or 
+Pyrethroids
+
+","Neem oil, 
+Garlic and Pepper Spray, 
+Peppermint oil or 
+Clove oil"
+northern_leaf_blight,Northern leaf blight,"Fungal disease   
+","Northern leaf blight, caused by the fungus Exserohilum turcicum. Symptoms include long, narrow, cigar-shaped lesions on leaves, starting as small, water-soaked spots and expanding into tan to grayish-brown blotches with wavy margins. Severe infections lead to premature leaf death, reduced photosynthesis, and yield loss.","Azoxystrobin, 
+Propiconazole, 
+Pyraclostrobin, 
+Trifloxystrobin or
+Tebuconazole","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or 
+Potassium bicarbonate"
+powdery_mildew,Powdery mildew,"Fungal disease   
+","Powdery mildew is a fungal disease characterized by the presence of white to grayish powdery patches on the surfaces of leaves, stems, and sometimes flowers or fruit. Symptoms include distorted growth, stunted development, and premature leaf drop.","Azoxystrobin, 
+Myclobutanil, 
+Propiconazole or
+Potassium bicarbonate","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or 
+Potassium bicarbonate"
+red_rot,Red rot,"Fungal disease   
+","Red rot is a destructive fungal disease caused by the pathogen Colletotrichum falcatum. Symptoms include reddish-brown lesions on stalks, internal discoloration, and rotting of vascular tissues, leading to stunted growth, reduced sugar content, and yield losses.
+","Neonicotinoids, 
+Propiconazole,
+Pyrethroids or Potassium bicarbonate","Neem oil, Garlic extract, Copper, Sulfur or 
+Potassium bicarbonate"
+spider_mites,Spider mites,"Pest disease   
+","Spider mites are tiny arachnids that feed on plant sap by piercing leaf tissue with their mouthparts. They are barely visible to the naked eye but can be identified by fine webbing they produce on leaves. Symptoms include stippling (tiny yellow or white spots) on leaves, webbing on leaves and between plant parts, leaf discoloration, and eventual leaf drop.","Abamectin, 
+Bifenazate, 
+Pyridaben or Spiromesifen","Neem oil, 
+Garlic and Pepper Spray, 
+Peppermint oil or 
+Clove oil"
+target_spot,Target spot,Fungal disease   ,"Target spot, caused by the fungus Corynespora cassiicola, is a foliar disease that affects various crops, including tomatoes, soybeans, and cotton. Symptoms include small, circular lesions on leaves with concentric rings resembling a target pattern. Lesions may turn tan or gray with dark margins as they enlarge, leading to premature defoliation if severe.","Captan,
+Boscalid,
+Fenbuconazole, 
+Mancozeb or
+Myclobutanil
+","Neem oil, 
+Garlic extract, 
+Copper, 
+Sulfur or potassium bicarbonate"
+tungro,Tungro,"Virus disease   
+","Tungro is a viral disease affecting rice plants, transmitted by leafhopper insects. Symptoms include stunted growth, yellowing and reddening of leaves, and reduced tillering. Infected plants often exhibit ""hopperburn"" or drying of leaf tips.","Carbamates, 
+Glyphosate, 
+Propanil or
+Pyrethroids","Neem oil or 
+Garlic extract"
