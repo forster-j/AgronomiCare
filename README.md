@@ -1,11 +1,17 @@
-# Crop disease prediction and pesticide/or natural remedies recommendation
+# Crop disease prediction and pesticide/ natural remedies recommendation
+
+![Agronomicare App](images/macbook_mockup_github.png)
+*Mockup designed by Rawpixel.com / Freepik*
 
 ## Overview
 
-This repository contains code for a crop disease prediction and remedies recommendation system. The Crop Disease Prediction and Remediation System plays a crucial role in modern agriculture by providing farmers with proactive tools to manage and safeguard their crops effectively. By accurately predicting the likelihood of crop diseases, the system empowers farmers to take preemptive measures, thereby reducing the risk of yield loss and economic damage. Additionally, the recommendation of appropriate remedies, whether pesticide-based or natural, enables farmers to make informed decisions that balance effectiveness with environmental sustainability. Ultimately, this system not only helps optimize crop yields but also contributes to the sustainable and responsible management of agricultural resources, ensuring food security for communities worldwide.
+This repository contains code for a crop disease prediction and remedies recommendation system. The crop disease prediction and remediation system plays a crucial role in modern agriculture by providing farmers with proactive tools to manage and safeguard their crops effectively. By accurately predicting the likelihood of crop diseases, the system empowers farmers to take preemptive measures, thereby reducing the risk of yield loss and economic damage. Additionally, the recommendation of appropriate remedies, whether pesticide-based or natural, enables farmers to make informed decisions that balance effectiveness with environmental sustainability. Ultimately, this system not only helps optimize crop yields but also contributes to the sustainable and responsible management of agricultural resources, ensuring food security for communities worldwide.
+#
+
+*This project serves as the capstone project for the Data Science Bootcamp by [neuefische](https://www.neuefische.de/). Team members are: [FreyaStein](https://github.com/FreyaStein), [forster-j](https://github.com/forster-j), [olugbengaoloyade](https://github.com/olugbengaoloyade) and [Ankit-kumar91](https://github.com/Ankit-kumar91).*
 
 ## About the Dataset
-We have used Plant Diseases Training Dataset from Kaggle. This dataset contains a collection of images of various plant leaves affected by different diseases. It is ccontain 95868 images and 38 disease type.
+The training dataset *Plant Diseases Training Dataset* can be found on [Kaggle](https://www.kaggle.com/datasets/nirmalsankalana/plant-diseases-training-dataset/data). This dataset contains a collection of images of various crop leaves affected by different diseases. It contains 95868 images and 38 disease types.
 > Total Images: 95868
 
 > Classes: 38 (e.g., 'Apple___Apple_scab', 'Apple___Black_rot', 'Grape___Black_rot', etc.) 
@@ -13,14 +19,11 @@ We have used Plant Diseases Training Dataset from Kaggle. This dataset contains 
 
 ## Repository Structure
 
-* model: Contains saved files of the model.
-* src: Includes scripts for different purposes:
-* preprocessing.py: Defines hyperparameters used in the model.
-* Load_and_EDA.py: Includes scripts for loading the data.
-* train.py: Script for training the models.
-* predict.py: Script for outcome of the models.
-* notebook: Experimental notebooks used for analysis and development.
-* feature_engineering.py: Script for the feature engineering.
+* functions: Contains functions for plotting and preprocessing the data
+* images: Images needed for the app
+* models: Trained model needed for the app
+* notebooks: Notebooks the explain loading, EDA, feature engineering and training.
+* util.py: Contains helper scripts for the streamlit app.
 
 ## Getting Started
 
@@ -86,16 +89,4 @@ Or ....
    
 ## Usage
 
-In order to train the model and store test data in the data folder and the model in models run:
-
-**`Note`**: Make sure your environment is activated.
-
-```bash
-python example_files/train.py  
-```
-
-In order to test that predict works on a test set you created run:
-
-```bash
-python example_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
-```
+Run the app with the following command: `streamlit run main.py`
